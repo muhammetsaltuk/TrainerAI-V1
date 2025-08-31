@@ -3,59 +3,87 @@
 ## 🇹🇷 Türkçe
 
 ### Proje Hakkında
-Bu proje, yazılım mühendisliği eğitimim sırasında geliştirdiğim bir bilgisayar görüşü uygulamasıdır. Flask web framework'ü kullanarak gerçek zamanlı bicep curl egzersizi takibi yapan bir sistem oluşturdum.
+Merhaba! Bu proje yazılım mühendisliği okurken yaptığım bir bilgisayar görüşü uygulaması. Flask kullanarak bicep curl egzersizlerini takip eden bir sistem yaptım. Gerçekten eğlenceli bir proje oldu! 😊
 
-### Özellikler
-- 🎯 **Gerçek Zamanlı Poz Takibi**: MediaPipe kullanarak vücut pozisyonunu algılar
-- 📊 **Otomatik Tekrar Sayımı**: Bicep curl hareketlerini otomatik olarak sayar
-- 📈 **İlerleme Çubuğu**: Egzersiz sırasında görsel geri bildirim sağlar
-- 🏷️ **Durum Göstergesi**: "Yukarı" ve "Aşağı" pozisyonları gösterir
-- 🌐 **Web Arayüzü**: Tarayıcı üzerinden kolay erişim
+### Ne Yapıyor?
+- 🎯 **Poz Takibi**: MediaPipe ile vücudunu takip ediyor
+- 📊 **Tekrar Sayımı**: Bicep curl'lerini otomatik sayıyor
+- 📈 **İlerleme Çubuğu**: Nasıl gittiğini gösteriyor
+- 🏷️ **Durum**: "Yukarı" mı "Aşağı" mı olduğunu söylüyor
+- 🌐 **Web Arayüzü**: Tarayıcıdan kolayca erişebiliyorsun
 
-### Kurulum
-1. Gerekli paketleri yükleyin:
+### Nasıl Kurulur?
+1. Önce gerekli paketleri yükle:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Uygulamayı çalıştırın:
+2. Uygulamayı çalıştır:
 ```bash
 python app.py
 ```
 
-3. Web tarayıcınızda şu adresi açın:
+3. Tarayıcında şu adresi aç:
 ```
 http://localhost:5001
 ```
 
-### Kullanım
-1. Web tarayıcınızda uygulamayı açın
-2. Kamera izni verin
-3. Kameranın önünde durun
-4. Bicep curl egzersizi yapmaya başlayın
-5. Uygulama otomatik olarak tekrarlarınızı sayacak
+### Nasıl Kullanılır?
+1. Tarayıcında uygulamayı aç
+2. Kameraya izin ver
+3. Kameranın önünde dur
+4. Bicep curl yapmaya başla
+5. Uygulama tekrarlarını sayacak!
 
-### Teknik Detaylar
-- **Poz Algılama**: MediaPipe Pose kullanılarak 33 vücut noktası takip edilir
-- **Açı Hesaplama**: Omuz, dirsek ve bilek arasındaki açı hesaplanır
-- **Hareket Algılama**: 160° üzeri "Aşağı", 30° altı "Yukarı" pozisyonu olarak kabul edilir
+### Teknik Detaylar (Biraz Teknik 😅)
+- **Poz Algılama**: MediaPipe ile 33 vücut noktasını takip ediyor
+- **Açı Hesaplama**: Omuz-dirsek-bilek açısını hesaplıyor
+- **Hareket Algılama**: 160° üstü "Aşağı", 30° altı "Yukarı" sayıyor
+
+---
+
+## 📁 Proje Yapısı
+```
+TrainerAI-V1/
+├── app.py              # Ana uygulama
+├── requirements.txt    # Gerekli paketler
+├── templates/          # HTML sayfaları
+│   ├── index.html
+│   └── biceps.html
+└── static/            # Resimler vs.
+    └── images/
+```
+
+## 🛠️ Kullandığım Teknolojiler
+- **Backend**: Flask (Python)
+- **Bilgisayar Görüşü**: OpenCV, MediaPipe
+- **Frontend**: HTML, CSS, JavaScript
+- **Matematik**: NumPy
+
+## 📚 Okul Projesi
+Bu proje yazılım mühendisliği derslerimde yaptığım bir proje. Şunları öğrendim:
+- Bilgisayar görüşü nasıl çalışır
+- Flask ile web uygulaması yapmak
+- Gerçek zamanlı veri işleme
+- Kullanıcı arayüzü tasarlamak
+- Yazılım mimarisi
 
 ---
 
 ## 🇺🇸 English
 
 ### About the Project
-This project is a computer vision application I developed during my software engineering education. I created a system that tracks bicep curl exercises in real-time using the Flask web framework.
+Hey! This is a computer vision app I made while studying software engineering. I built a system that tracks bicep curl exercises using Flask. It was a really fun project! 😊
 
-### Features
-- 🎯 **Real-time Pose Tracking**: Detects body position using MediaPipe
-- 📊 **Automatic Rep Counting**: Automatically counts bicep curl movements
-- 📈 **Progress Bar**: Provides visual feedback during exercise
-- 🏷️ **Status Indicator**: Shows "Up" and "Down" positions
+### What Does It Do?
+- 🎯 **Pose Tracking**: Tracks your body using MediaPipe
+- 📊 **Rep Counting**: Automatically counts your bicep curls
+- 📈 **Progress Bar**: Shows how you're doing
+- 🏷️ **Status**: Tells you if you're "Up" or "Down"
 - 🌐 **Web Interface**: Easy access through browser
 
-### Installation
-1. Install required packages:
+### How to Install?
+1. First install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
@@ -65,49 +93,47 @@ pip install -r requirements.txt
 python app.py
 ```
 
-3. Open this address in your web browser:
+3. Open this address in your browser:
 ```
 http://localhost:5001
 ```
 
-### Usage
-1. Open the application in your web browser
+### How to Use?
+1. Open the app in your browser
 2. Allow camera permission
 3. Stand in front of your camera
-4. Start doing bicep curl exercises
-5. The app will automatically count your repetitions
+4. Start doing bicep curls
+5. The app will count your reps!
 
-### Technical Details
-- **Pose Detection**: Tracks 33 body points using MediaPipe Pose
-- **Angle Calculation**: Calculates angle between shoulder, elbow, and wrist
-- **Movement Detection**: Above 160° is "Down", below 30° is "Up" position
+### Technical Details (A Bit Technical 😅)
+- **Pose Detection**: Tracks 33 body points using MediaPipe
+- **Angle Calculation**: Calculates shoulder-elbow-wrist angle
+- **Movement Detection**: Above 160° is "Down", below 30° is "Up"
 
 ---
 
 ## 📁 Project Structure
 ```
 TrainerAI-V1/
-├── app.py              # Main Flask application
-├── requirements.txt    # Python dependencies
-├── templates/          # HTML templates
+├── app.py              # Main application
+├── requirements.txt    # Required packages
+├── templates/          # HTML pages
 │   ├── index.html
 │   └── biceps.html
-└── static/            # Static files
+└── static/            # Images etc.
     └── images/
 ```
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies I Used
 - **Backend**: Flask (Python)
 - **Computer Vision**: OpenCV, MediaPipe
 - **Frontend**: HTML, CSS, JavaScript
 - **Mathematics**: NumPy
 
-## 📚 Academic Context
-This project was developed as part of my software engineering curriculum, demonstrating practical application of:
-- Computer vision and machine learning concepts
-- Web development with Flask
+## 📚 School Project
+This project was part of my software engineering coursework. I learned:
+- How computer vision works
+- Building web apps with Flask
 - Real-time data processing
-- User interface design
-- Software architecture principles
-
-
+- Designing user interfaces
+- Software architecture 
